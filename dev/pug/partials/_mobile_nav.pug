@@ -1,0 +1,24 @@
+.mobile-nav.container
+      +image("logo.png","BM Log","30px","30px")
+      h3 BM Media
+      label(for="side-nav-check")
+         i.fas.fa-bars
+      input(type="checkbox" id="side-nav-check" class="side-nav-check")
+      .side-nav-wrapper 
+         ul.dropdown-menu 
+            - const menuItems = ["ပြည်တွင်း","မန်းသတင်း","ဆောင်းပါး","နိုင်ငံတကာ","အခြား"]
+            each item,i in menuItems 
+               if i != 4
+                  li 
+                     a(href="#")= item
+               else 
+                  li 
+                     a(href="#")= item
+                     label(for="inner-menu-check")
+                        i.fas.fa-sort-down
+                     input(type="checkbox" id="inner-menu-check" class="inner-menu-check")
+                     - const innerItems = ["အားကစား","ရွှေ - ငွေ စျေး","နည်းပညာ","အယ်ဒီတာ့ အာဘော်","ဆက်သွယ်ရန်"]
+                     ul.inner-dropdown
+                        each itm in innerItems 
+                           li 
+                              a(href="#")=itm

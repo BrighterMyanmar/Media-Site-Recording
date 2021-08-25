@@ -1,0 +1,6 @@
+header 
+      .header.container 
+         - const headerContents = ['bm.png','banner1.jpg','banner2.jpg']
+         each hder,i in headerContents 
+            div 
+               +image(hder,hder)

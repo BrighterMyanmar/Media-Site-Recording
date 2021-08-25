@@ -1,0 +1,33 @@
+.container
+      nav 
+         a(href="#") ပင်မစာမျက်နှာ
+         - const news = [{name:"ပြည်တွင်း",rname:"homeaffair-radio"},{name:"မန်းသတင်း",rname:"mdy-radio"},{name:"ဆောင်းပါး",rname:"article-radio"},{name:"နိုင်ငံတကာ",rname:"inter-radio"},{name:"အခြား",rname:"other-radio"}]
+         ul 
+            each item,i in news 
+               if i != 4
+                  li 
+                     input(type="radio" id=`${item.rname}` class="nav-radio-group" name="navradio")
+                     a(href="#")
+                        label(for=`${item.rname}`)= item.name
+               else 
+                  li 
+                     input(type="radio" id=`${item.rname}` class="nav-radio-group" name="navradio")
+                     a(href="#")
+                        label(for=`${item.rname}`)= item.name
+                           label(for="nav-dropdown-check")
+                              i.fas.fa-sort-down
+                     input(type="checkbox" id="nav-dropdown-check" class="nav-dropdown-check")
+                     - const navInnerItems = ["အားကစား","ရွှေ - ငွေ စျေး","နည်းပညာ","အယ်ဒီတာ့ အာဘော်","ဆက်သွယ်ရန်"];
+                     ul.nav-dropdown
+                        for navitem in navInnerItems 
+                           li
+                              a(href="#")= navitem
+
+.update-news.container 
+      button Latest News 
+      p
+         marquee Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore laboriosam earum ullam debitis illum non obcaecati blanditiis nam temporibus quis!
+      form 
+         input(type="search" id="searchPost")
+         button(type="submit")
+            i.fas.fa-search

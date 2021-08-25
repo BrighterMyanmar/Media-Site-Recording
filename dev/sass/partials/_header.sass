@@ -1,0 +1,20 @@
+header 
+   margin-top: 15px 
+
+.header 
+   display: grid 
+   grid-template-columns: 1fr 4fr 4fr
+
+   > div 
+      > img 
+         display: block
+         margin: 0 auto
+         width: 100%
+   @include mQ("768px")
+      grid-template-columns: 1fr 1fr
+      > div 
+          &:first-child 
+             display: none 
+
+   @include mQ("425px")
+      grid-template-columns: 1fr

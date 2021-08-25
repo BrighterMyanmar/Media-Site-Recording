@@ -1,0 +1,7 @@
+mixin image(imgSrc,alt,width,height)
+   if width && height 
+      img(src=`./assets/images/${imgSrc}` alt=alt width=width height=height)
+   else if width 
+      img(src=`./assets/images/${imgSrc}` alt=alt width=width)
+   else 
+      img(src=`./assets/images/${imgSrc}` alt=alt width=width)

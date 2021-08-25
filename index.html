@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html> 
+  <head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <link rel="icon" href="./assets/images/logo.png">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <title>BM Media</title>
+  </head>
+  <body>
+    <h1 id="screenWidth"></h1>
+    <div class="mobile-nav container"><img src="./assets/images/logo.png" alt="BM Log" width="30px" height="30px"/>
+      <h3>BM Media</h3>
+      <label for="side-nav-check"><i class="fas fa-bars"></i></label>
+      <input class="side-nav-check" type="checkbox" id="side-nav-check">
+      <div class="side-nav-wrapper"> 
+        <ul class="dropdown-menu"> 
+          <li> <a href="#">ပြည်တွင်း</a></li>
+          <li> <a href="#">မန်းသတင်း</a></li>
+          <li> <a href="#">ဆောင်းပါး</a></li>
+          <li> <a href="#">နိုင်ငံတကာ</a></li>
+          <li> <a href="#">အခြား</a>
+            <label for="inner-menu-check"><i class="fas fa-sort-down"></i></label>
+            <input class="inner-menu-check" type="checkbox" id="inner-menu-check">
+            <ul class="inner-dropdown">
+              <li> <a href="#">အားကစား</a></li>
+              <li> <a href="#">ရွှေ - ငွေ စျေး</a></li>
+              <li> <a href="#">နည်းပညာ</a></li>
+              <li> <a href="#">အယ်ဒီတာ့ အာဘော်</a></li>
+              <li> <a href="#">ဆက်သွယ်ရန်</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <header> 
+      <div class="header container"> 
+        <div> <img src="./assets/images/bm.png" alt="bm.png"/>
+        </div>
+        <div> <img src="./assets/images/banner1.jpg" alt="banner1.jpg"/>
+        </div>
+        <div> <img src="./assets/images/banner2.jpg" alt="banner2.jpg"/>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <nav> <a href="#">ပင်မစာမျက်နှာ</a>
+        <ul> 
+          <li> 
+            <input class="nav-radio-group" type="radio" id="homeaffair-radio" name="navradio"><a href="#">
+              <label for="homeaffair-radio">ပြည်တွင်း</label></a>
+          </li>
+          <li> 
+            <input class="nav-radio-group" type="radio" id="mdy-radio" name="navradio"><a href="#">
+              <label for="mdy-radio">မန်းသတင်း</label></a>
+          </li>
+          <li> 
+            <input class="nav-radio-group" type="radio" id="article-radio" name="navradio"><a href="#">
+              <label for="article-radio">ဆောင်းပါး</label></a>
+          </li>
+          <li> 
+            <input class="nav-radio-group" type="radio" id="inter-radio" name="navradio"><a href="#">
+              <label for="inter-radio">နိုင်ငံတကာ</label></a>
+          </li>
+          <li> 
+            <input class="nav-radio-group" type="radio" id="other-radio" name="navradio"><a href="#">
+              <label for="other-radio">အခြား
+                <label for="nav-dropdown-check"><i class="fas fa-sort-down"></i></label>
+              </label></a>
+            <input class="nav-dropdown-check" type="checkbox" id="nav-dropdown-check">
+            <ul class="nav-dropdown">
+              <li><a href="#">အားကစား</a></li>
+              <li><a href="#">ရွှေ - ငွေ စျေး</a></li>
+              <li><a href="#">နည်းပညာ</a></li>
+              <li><a href="#">အယ်ဒီတာ့ အာဘော်</a></li>
+              <li><a href="#">ဆက်သွယ်ရန်</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="update-news container"> 
+      <button>Latest News </button>
+      <p>
+        <marquee>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore laboriosam earum ullam debitis illum non obcaecati blanditiis nam temporibus quis!</marquee>
+      </p>
+      <form> 
+        <input type="search" id="searchPost">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+    <div class="base"> 
+      <script src="./assets/js/index.js"></script>
+    </div>
+  </body>
+</html>

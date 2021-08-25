@@ -1,0 +1,120 @@
+
+.nav-radio-group
+   display: none
+
+nav 
+   background-color: $primary
+   display: flex
+   height:65px
+   align-items: center
+   margin-top: 20px
+
+   @include mQ("768px")
+      display: none
+
+   a 
+      color: $default
+      margin-left: 20px
+
+   > ul 
+      display: flex
+      flex:1
+      justify-content: flex-end
+      margin:15px 20px 0 0
+
+      > li
+         padding: 20px
+         position: relative
+
+         input 
+            &:checked
+               &+a::after 
+                  transform: scale(1,1)
+
+         > a 
+            &:after 
+               content:""
+               background-color: $accent
+               display: block
+               height:5px 
+               margin-top:10px
+               border-radius:20px
+               transform: scale(0,1)
+               transition: 200ms
+
+.nav-dropdown-check
+   display: none
+
+.nav-dropdown-check
+   &:checked
+      &+.nav-dropdown
+         transform: scale(1,1)
+
+.nav-dropdown
+   background-color: $primary
+   position: absolute
+   top:60px
+   right:0
+   width: 250px
+   transform: scale(1,0)
+   transform-origin: top 
+   transition: 300ms
+   z-index:1000
+
+   li
+      line-height:45px
+      border-bottom: 1px solid $dark
+
+      a
+         padding-left:40px
+         transition: 200ms
+
+      &:hover 
+         background-color: $secondary
+
+         a 
+            color: $accent
+            padding-left: 50px
+
+
+.update-news
+   background-color: $secondary
+   display: flex
+   height: 65px
+   align-items: center
+
+   @include mQ("768px")
+      display: none
+
+   > button
+      border: none
+      width: 150px
+      padding: 8px 15px
+      background-color: $accent
+      color: $default
+      text-transform: uppercase
+      font-family: Lato
+      font-weight: bold
+      margin-left: 20px
+
+   p
+      color: $default
+
+   form
+      position: relative
+      margin-right: 20px
+      input
+         padding: 7px 20px
+
+         &:focus
+            outline: none
+
+      button 
+         position: absolute
+         top: 9px
+         right: 10px
+         background-color: transparent
+         border: none
+         color: $accent
+
+
