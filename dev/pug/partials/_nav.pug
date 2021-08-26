@@ -12,11 +12,9 @@
                else 
                   li 
                      input(type="radio" id=`${item.rname}` class="nav-radio-group" name="navradio")
-                     a(href="#")
-                        label(for=`${item.rname}`)= item.name
-                           label(for="nav-dropdown-check")
-                              i.fas.fa-sort-down
-                     input(type="checkbox" id="nav-dropdown-check" class="nav-dropdown-check")
+                     label(for="nav-dropdown-check")= item.name
+                        i.fas.fa-sort-down.nav-sort-down
+                     input(type="checkbox" id="nav-dropdown-check" class="nav-dropdown-check" onclick="changeSortDown(this)")
                      - const navInnerItems = ["အားကစား","ရွှေ - ငွေ စျေး","နည်းပညာ","အယ်ဒီတာ့ အာဘော်","ဆက်သွယ်ရန်"];
                      ul.nav-dropdown
                         for navitem in navInnerItems 

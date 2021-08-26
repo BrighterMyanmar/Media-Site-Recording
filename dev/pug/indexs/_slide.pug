@@ -1,0 +1,21 @@
+.slide-wrapper.container
+      .slide-card
+         .slide-body 
+            img(src="./assets/images/1.png" name="slide")
+         .slide-caption
+            each ind in [0,1,2,3,4]
+               input(type="radio" name="slideradios" id=`slideradio${ind}` onclick="changeSlide(this.value)" value=ind)
+         .slide-footer
+            p Brighter Myanmar ကွန်ပြူတာ ပညာရှင်များ အဖွဲ့မှ ကြီးမှူး၍
+
+      .aside-wrapper
+         .aside-nav
+            button လူမှူဘ၀
+            button More +
+         .aside-body 
+            figure 
+               +image("2.png","Slide 2 Image")
+               figcaption Brighter Myanmar သင်တန်းခွဲများ ဖွင့်လှစ်ခြင်း
+            
+            p. 
+               Brighter Myanmar ကွန်ပြူတာ ပညာရှင်များ အဖွဲ့မှ ကြီးမှ၍ ၂၃ ကြိမ်မြောက် Programming သင်တန်းခွဲအား မြန်မာနိုင်ငံ ပညာလိုလားသူ လူကြီးလူငယ်များ Programming ဘာသာရပ် အဆင့်မြင့်စေရန် ရည်ရွယ်၍ အများစုသော ၀ါသနာရှင်များ၏ တောင်းဆိုမှူအား ဖြည့်စီးပေးသည့် အနေနှင့် ဖွင့်လှစ်သင်ကြားပေးသွားမည်၊ သင်တန်းသာဦးရေ ကန့်သတ်ထားပြီး တကယ်ပညာ ကြိုးစားလေ့လာလိုသူများကို သာလက်ခံ သင်ခန်းသွားပေးမည်၊ သင်တန်းကြေး အနေနှင့်

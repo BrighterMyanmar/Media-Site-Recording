@@ -64,11 +64,9 @@
               <label for="inter-radio">နိုင်ငံတကာ</label></a>
           </li>
           <li> 
-            <input class="nav-radio-group" type="radio" id="other-radio" name="navradio"><a href="#">
-              <label for="other-radio">အခြား
-                <label for="nav-dropdown-check"><i class="fas fa-sort-down"></i></label>
-              </label></a>
-            <input class="nav-dropdown-check" type="checkbox" id="nav-dropdown-check">
+            <input class="nav-radio-group" type="radio" id="other-radio" name="navradio">
+            <label for="nav-dropdown-check">အခြား<i class="fas fa-sort-down nav-sort-down"></i></label>
+            <input class="nav-dropdown-check" type="checkbox" id="nav-dropdown-check" onclick="changeSortDown(this)">
             <ul class="nav-dropdown">
               <li><a href="#">အားကစား</a></li>
               <li><a href="#">ရွှေ - ငွေ စျေး</a></li>
@@ -90,7 +88,35 @@
         <button type="submit"><i class="fas fa-search"></i></button>
       </form>
     </div>
+    <div class="slide-wrapper container">
+      <div class="slide-card">
+        <div class="slide-body"> <img src="./assets/images/1.png" name="slide"></div>
+        <div class="slide-caption">
+          <input type="radio" name="slideradios" id="slideradio0" onclick="changeSlide(this.value)" value="0">
+          <input type="radio" name="slideradios" id="slideradio1" onclick="changeSlide(this.value)" value="1">
+          <input type="radio" name="slideradios" id="slideradio2" onclick="changeSlide(this.value)" value="2">
+          <input type="radio" name="slideradios" id="slideradio3" onclick="changeSlide(this.value)" value="3">
+          <input type="radio" name="slideradios" id="slideradio4" onclick="changeSlide(this.value)" value="4">
+        </div>
+        <div class="slide-footer">
+          <p>Brighter Myanmar ကွန်ပြူတာ ပညာရှင်များ အဖွဲ့မှ ကြီးမှူး၍</p>
+        </div>
+      </div>
+      <div class="aside-wrapper">
+        <div class="aside-nav">
+          <button>လူမှူဘ၀</button>
+          <button>More +</button>
+        </div>
+        <div class="aside-body"> 
+          <figure> <img src="./assets/images/2.png" alt="Slide 2 Image"/>
+            <figcaption>Brighter Myanmar သင်တန်းခွဲများ ဖွင့်လှစ်ခြင်း</figcaption>
+          </figure>
+          <p>Brighter Myanmar ကွန်ပြူတာ ပညာရှင်များ အဖွဲ့မှ ကြီးမှ၍ ၂၃ ကြိမ်မြောက် Programming သင်တန်းခွဲအား မြန်မာနိုင်ငံ ပညာလိုလားသူ လူကြီးလူငယ်များ Programming ဘာသာရပ် အဆင့်မြင့်စေရန် ရည်ရွယ်၍ အများစုသော ၀ါသနာရှင်များ၏ တောင်းဆိုမှူအား ဖြည့်စီးပေးသည့် အနေနှင့် ဖွင့်လှစ်သင်ကြားပေးသွားမည်၊ သင်တန်းသာဦးရေ ကန့်သတ်ထားပြီး တကယ်ပညာ ကြိုးစားလေ့လာလိုသူများကို သာလက်ခံ သင်ခန်းသွားပေးမည်၊ သင်တန်းကြေး အနေနှင့်</p>
+        </div>
+      </div>
+    </div>
     <div class="base"> 
+      <div style="height:350px"></div>
       <script src="./assets/js/index.js"></script>
     </div>
   </body>

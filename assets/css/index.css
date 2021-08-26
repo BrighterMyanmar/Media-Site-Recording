@@ -56,7 +56,11 @@ header {
 .header > div > img {
   display: block;
   margin: 0 auto;
-  width: 100%;
+}
+@media screen and (max-width: 978px) {
+  .header > div > img {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 768px) {
   .header {
@@ -162,9 +166,19 @@ nav {
     display: none;
   }
 }
-nav a {
+nav a, nav label {
   color: #fff;
   margin-left: 20px;
+}
+nav .fa-sort-down {
+  padding-left: 5px;
+  transition: 300ms;
+}
+nav .sort-up {
+  transform: rotate(180deg);
+  position: relative;
+  top: 5px;
+  left: 5px;
 }
 nav > ul {
   display: flex;
@@ -267,6 +281,71 @@ nav > ul > li > a:after {
   background-color: transparent;
   border: none;
   color: #FF4C29;
+}
+
+.slide-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 20px;
+  grid-gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .slide-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+.slide-wrapper img {
+  width: 100%;
+}
+.slide-wrapper .slide-card {
+  background-color: #082032;
+  padding: 20px;
+}
+.slide-wrapper .slide-body img {
+  border-radius: 5px;
+}
+.slide-wrapper .slide-caption {
+  text-align: center;
+  padding-top: 10px;
+}
+.slide-wrapper .slide-footer p {
+  color: #fff;
+  text-align: center;
+  padding-top: 10px;
+}
+.slide-wrapper .aside-wrapper {
+  background-color: #082032;
+}
+.slide-wrapper .aside-wrapper .aside-nav {
+  display: flex;
+  min-height: 45px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.slide-wrapper .aside-wrapper .aside-nav button {
+  padding: 3px 15px;
+  min-height: 35px;
+  font-family: Lato;
+  font-weight: bold;
+  background-color: #FF4C29;
+  border: none;
+  color: #fff;
+}
+.slide-wrapper .aside-wrapper .aside-body {
+  padding: 20px;
+}
+.slide-wrapper .aside-wrapper .aside-body figure figcaption {
+  color: #fff;
+  text-align: center;
+  padding: 10px 0 15px 0;
+}
+.slide-wrapper .aside-wrapper .aside-body p {
+  color: #fff;
+  line-height: 28px;
+  text-align: justify;
+  text-indent: 20px;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=index.css.map */
