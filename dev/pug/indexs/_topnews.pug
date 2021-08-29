@@ -1,0 +1,20 @@
+section.topnews-videonews.container 
+   .topnews 
+      .aside-nav
+         button ထိပ်တန်းသတင်း
+         button More +
+
+      - const topnewsItems = [{image:"p1.jpg",title:"ရန်ကုန် ရွှေတိဂုံ ဘုရား"},{image:"p2.jpg",title:"အောက်ဆီဂျင် ထုတ်ဖော်ပုံ"},{image:"p3.jpg",title:"ဘယ်နေရာလဲ မသိတဲ့ပုံ"},{image:"p4.jpg",title:"ပုဂံဘုရားများ လေ့လာရေး"}]
+
+      .topnewsarticles 
+         each nws in topnewsItems 
+            figure 
+               +image(nws.image,nws.title)
+               figcaption= nws.title
+   .videonews 
+      .aside-nav
+         button ရုပ်သံ
+         button More +
+      .aside-body 
+         video(controls)
+            source(src="../assets/videos/video.mp4")

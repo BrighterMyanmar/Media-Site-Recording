@@ -1,0 +1,68 @@
+footer 
+   background-color: $primary
+
+   .footer-inner
+      max-width: 900px
+      margin: 0 auto
+      display: grid 
+      grid-template-columns: repeat(3,1fr)
+      color: $default
+      padding: 30px
+
+      @include mQ("426px")
+         grid-template-columns: 1fr 1fr
+
+      ul 
+         h3 
+            padding:20px 0
+            font-size: 25px
+
+         li 
+            line-height: 25px 
+
+            a 
+               color: $dark
+
+               &:hover 
+                  color: $accent
+
+      form 
+         padding: 10px 0
+         position: relative
+
+         legend 
+            font-size: 25px
+
+         input,legend
+            display: block 
+            margin-bottom: 10px
+            padding: 10px 30px
+            border: none 
+            width: 80%
+
+            @include mQ("426px")
+               width: 100%
+
+            &:focus
+               border: none
+               outline: none
+
+         button 
+            border: none 
+            padding: 7px 15px
+            font-family: Bitter
+            font-weight: bold
+            background-color: $accent
+            color: $default
+            position: absolute 
+            right: 0
+            
+.dev 
+   background-color: $primary
+
+   p 
+      padding: 20px
+      color: $default
+      text-align: center
+      box-shadow: 0 1px 0 $dark  inset
+      margin-top: 20px

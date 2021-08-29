@@ -5,3 +5,15 @@ mixin image(imgSrc,alt,width,height)
       img(src=`./assets/images/${imgSrc}` alt=alt width=width)
    else 
       img(src=`./assets/images/${imgSrc}` alt=alt width=width)
+
+mixin interviewArticel(name)
+   .aside-inter
+      .aside-nav
+         button= name
+         button More + 
+      .aside-body 
+         figure 
+            +image("1.png","Flutter")
+            figcaption #{sampleTitle}
+         p. 
+            #{samplePara}

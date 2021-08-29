@@ -1,0 +1,13 @@
+.interview-article-ads.container
+   .interview 
+      +interviewArticel("အင်တာဗျူး")
+      +interviewArticel("ဆောင်ပါး")
+      each indx in [1,2,3,4,5,6,7,8]
+         .aside-img-link
+            +image(`p${(indx%5)+1}.jpg`)
+            a(href="#") #{sampleParaShort}
+
+   .aside-img-link 
+      each indx in [1,2,3,4,5,6,7,8]
+         +image(`p${(indx%5)+1}.jpg`)
+         a(href="#") #{sampleParaShort}

@@ -1,0 +1,24 @@
+footer 
+   .footer-inner
+      -const aboutMedias = ["About Us","How Organized","Advertisement","Apk Download","Our facebook Page","Contact U"]
+
+      ul 
+         h3 About Us 
+         each au in [0,1,2]
+            li 
+               a(href="#")= aboutMedias[au]
+
+      ul 
+         h3 Useful Links
+         each au in [3,4,5]
+            li 
+               a(href="#")= aboutMedias[au]
+
+      form 
+         legend User Login 
+         input(type="text")
+         input(type="password")
+         button(type="submit") Login
+   
+   .dev 
+      p Copyright@Brighte Myanmar - Since 2001

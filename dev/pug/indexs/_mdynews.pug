@@ -1,0 +1,19 @@
+section.topnews-videonews.container 
+   .topnews 
+      .aside-nav
+         button မန်းသတင်း
+         button More +
+
+      .topnewsarticles 
+         each nws in topnewsItems 
+            figure 
+               +image("p4.jpg")
+               figcaption= nws.title
+               
+   .thumnail-videos 
+      each vids in [0,1,3]
+         .thumvid 
+            video(controls)
+               source(src="../assets/videos/video.mp4")
+            a(href="#"). 
+               #{sampleParaShort}

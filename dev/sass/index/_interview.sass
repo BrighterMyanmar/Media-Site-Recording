@@ -1,0 +1,52 @@
+.interview-article-ads.container
+   display: grid 
+   grid-template-columns: 2fr 1fr
+   grid-gap : 20px
+   align-items: start
+
+   @include mQ("768px")
+      grid-template-columns: 1fr
+
+   img 
+      width: 100%
+
+   .interview 
+      display: grid 
+      grid-template-columns: repeat(2,1fr)
+      grid-gap : 10px
+      color: $default
+
+      @include mQ("426px")
+         grid-template-columns: 1fr
+
+      .aside-inter 
+         background-color: $primary
+
+      .aside-body
+         margin-bottom: 20px
+         figure 
+            figcaption
+               text-align: center
+               padding: 20px 
+
+         p 
+            line-height: 25px
+            font-size: 0.9rem
+            padding:0 20px
+            text-align: justify
+            text-indent: 30px
+
+.aside-img-link
+   display: grid 
+   grid-template-columns: repeat(2,1fr)
+   margin-bottom: 10px
+   img 
+      margin-bottom: 10px
+   a 
+      padding:0 5px
+      font-size: 0.8rem
+      line-height: 20px
+      text-align: justify
+
+      &:hover 
+         text-decoration: underline

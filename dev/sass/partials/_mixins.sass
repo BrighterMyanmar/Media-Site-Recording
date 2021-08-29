@@ -1,3 +1,20 @@
 @mixin mQ($arg)
    @media screen and (max-width:$arg)
       @content
+
+.aside-nav
+   display: flex
+   min-height: 45px
+   align-items: center
+   justify-content: space-between
+   padding:10px
+   background-color: $primary
+
+   button 
+      padding: 3px 15px
+      min-height: 35px
+      font-family: Lato
+      font-weight: bold
+      background-color: $accent
+      border: none
+      color: $default

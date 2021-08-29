@@ -1,0 +1,38 @@
+.innernews-sideads
+   display: grid
+   grid-template-columns: 2fr 1fr
+   grid-gap: 20px
+
+   @include mQ("768px")
+      grid-template-columns: 1fr
+
+   img
+      width: 100%
+
+   .innernewsarticles
+      margin-top: 20px
+
+   .newcard
+      display: grid
+      grid-template-columns: repeat(2,1fr)
+      margin-bottom: 20px
+
+      @include mQ("426px")
+         grid-template-columns: 1fr
+
+      h3
+         text-align: center
+         font-weight: bold
+         margin-top: 20px
+
+      p
+         line-height: 28px
+         font-size: 14px
+         padding: 10px 20px
+         text-indent: 25px
+         padding-top: 10px
+         text-align: justify
+
+   .sideads
+      img
+         margin-bottom: 10px

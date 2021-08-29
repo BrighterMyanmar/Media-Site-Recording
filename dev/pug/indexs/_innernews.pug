@@ -1,0 +1,18 @@
+.innernews-sideads.container 
+   .innernews 
+      .aside-nav 
+         button ပြည်တွင်းသတင်း 
+         button More +
+
+      .innernewsarticles 
+         each arti in [1,2,3,5]
+            .newcard 
+               +image(`p${arti}.jpg`)
+               div 
+                  h3 #{sampleTitle}
+                  p. 
+                     #{samplePara}
+
+   .sideads
+      +image("sideads.jpg")
+      +image("sideads2.jpg")
