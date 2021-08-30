@@ -1,0 +1,111 @@
+@use 'modules/base'
+@import 'partials/variables'
+@import 'partials/mixins'
+@import 'partials/share'
+@import 'partials/header'
+@import 'partials/mobile_nav'
+@import 'partials/nav'
+
+.detailnews.container
+   display: grid 
+   grid-template-columns: 2fr 1fr
+   margin-top: 20px
+   grid-gap : 20px
+
+   @include mQ("768px")
+      grid-template-columns: 1fr
+
+   img 
+      width: 100%
+
+   .detail
+      .tatin-bar 
+         h3 
+            background-color: transparent
+            display: block
+            text-align: center
+
+   .detail-slogan 
+      background-color: $primary
+      padding: 20px
+
+      .subtitle 
+         color: $default
+         display: flex
+         align-items: center
+         margin: 25px 0 5px
+         position: relative
+
+         > * 
+            position: absolute
+            z-index: 3
+
+         .fa-camera 
+            font-size: 30px
+            padding-right: 10px
+            background-color: $primary
+
+         .block-dash
+            max-height: 2px
+            top: -8px
+            z-index: 2
+
+         .title
+            padding-left: 10px
+            right: 0
+            background-color: $primary
+
+.detail-article-title 
+   p 
+      color: $dark 
+      margin: 10px 0
+      font-size: 14px
+
+.detail-article-content 
+   p 
+      font-size: 14px
+      line-height: 25px
+      color: $dark
+      text-indent: 40px
+      text-align: justify
+      margin-bottom: 20px
+
+.detail-article-footer 
+   p 
+      > * 
+         padding-right: 10px 
+         color: $dark
+
+.comment-box
+   margin: 20px 0
+   form 
+      > * 
+         color: $default
+
+         &:focus 
+            outline: none 
+
+      input 
+         display: block 
+         padding: 10px 20px
+         margin: 10px 0
+         width: 300px
+         border: none
+         background-color: $secondary
+
+      textarea 
+         display: block
+         width: 60%
+         border: none 
+         background-color: $secondary
+         min-height: 200px
+
+      button 
+         border: none 
+         color: $dark
+         padding: 10px 20px
+         background-color : $accent
+         color: $default
+         margin: 10px 0
+
+@import 'partials/footer'

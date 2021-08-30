@@ -1,0 +1,33 @@
+.aside-img-link
+   display: grid 
+   grid-template-columns: repeat(2,1fr)
+   margin-bottom: 10px
+
+   @include mQ("768px")
+      grid-template-columns: 1fr
+
+   @include mQ("426px")
+      grid-template-columns: repeat(2,1fr)
+
+   img 
+      margin-bottom: 10px
+   a 
+      padding:0 5px
+      font-size: 0.8rem
+      line-height: 20px
+      text-align: justify
+      color: $dark
+
+      &:hover 
+         text-decoration: underline
+
+.tatin-bar 
+   background-color: $secondary
+   margin-bottom: 20px
+   h3
+      line-height: 45px
+      background-color: $accent
+      display: inline-block
+      padding:0 20px
+      font-weight: bold
+      color: $default

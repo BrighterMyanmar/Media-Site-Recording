@@ -1,0 +1,50 @@
+include partials/_variables
+include partials/_mixins
+include partials/_top
+   include partials/_mobile_nav
+   include partials/_header
+   include partials/_nav
+
+   .detailnews.container
+      .detail
+         .tatin-bar 
+            h3 #{sampleTitle}
+
+         .detail-slogan
+            +image("1.png")
+            p.subtitle 
+               i.fas.fa-camera 
+               span.block-dash -----------------------------------------------------------------------------------------------------------------------
+               span.title #{sampleTitle}
+
+         .detail-article-title 
+            p 
+               span By 
+               i.fas.fa-user
+               span အောင်ဒင်
+            p ဖေဖ၀ါရီ (၁၃) ၊ ၂၀၁၈
+
+         .detail-article-content 
+            each idx in [1,2,3,4,5]
+               p.para #{samplePara}#{samplePara}#{samplePara}
+
+         .detail-article-footer 
+            p 
+               span Tags 
+               i.fas.fa-bullhorn 
+               span သင်တန်း | Programming | Myanmar
+
+         .comment-box 
+            form 
+               input(type="text" placeholder="name")
+               input(type="tel" placeholder="phone")
+               textarea
+               button(type="submit") Comment
+
+      .connect-news
+         .tatin-bar 
+            h3 ဆက်စက်သတင်း
+         +connectedNews
+   include partials/_footer
+   include partials/_base
+

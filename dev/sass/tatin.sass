@@ -1,0 +1,52 @@
+@use 'modules/base'
+@import 'partials/variables'
+@import 'partials/mixins'
+@import 'partials/share'
+@import 'partials/header'
+@import 'partials/mobile_nav'
+@import 'partials/nav'
+
+.tatin.container 
+   display: grid 
+   grid-template-columns: 2fr 1fr
+   margin-top: 20px
+   margin-bottom: 20px
+   grid-gap: 20px
+
+   @include mQ("768px")
+      grid-template-columns: 1fr
+
+   img 
+      width: 100%
+
+   .top-new-article 
+      display: grid 
+      grid-template-columns: repeat(2,1fr)
+
+      @include mQ("426px")
+         grid-template-columns: 1fr
+
+      h3 
+         text-align: center
+         line-height: 25px
+
+         @include mQ("1024px")
+            line-height: 20px 
+
+      p 
+         line-height: 25px 
+         font-size: 14px
+         padding: 20px
+         text-align: justify
+         text-indent: 20px
+
+         @include mQ("1024px")
+            font-size: 12px
+            line-height: 18px 
+            padding: 5px 20px
+
+
+
+@import 'partials/footer'
+
+
